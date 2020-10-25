@@ -1,4 +1,5 @@
-const fs = require('fs');
+const notes = require('./notes');
+const validator = require('validator');
 
-// fs.writeFileSync('notes.txt', 'This file was created by Node.js!');
-fs.appendFileSync('notes.txt', 'Appending this text');
+console.log(notes.getNotes());
+console.log(notes.printMessage());
