@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Fredomontero/notes-fs#readme",
   "dependencies": {
+    "chalk": "^4.1.0",
     "validator": "^13.1.17"
   }
 }

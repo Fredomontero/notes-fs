@@ -1,5 +1,4 @@
 const notes = require('./notes');
-const validator = require('validator');
+const chalk = require('chalk');
 
-console.log(notes.getNotes());
-console.log(notes.printMessage());
+console.log(chalk.green('success'));
