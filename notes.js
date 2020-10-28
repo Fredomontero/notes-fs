@@ -44,6 +44,19 @@ const printNotes = () => {
   });
 }
 
+const readNote = (title) => {
+  const notes = loadNotes();
+  let note = notes.filter( note => note.title === title);
+  if(note.length > 0){
+    console.log("\n");
+    console.log("Title: ", note[0].title);
+    console.log("Body: ", note[0].body);
+  }else{
+    console.log(chalk.red.bold("Note not found"));
+  }
+  
+};
+
 const loadNotes = () => {
   try{
     const dataBuffer = fs.readFileSync('notes.json');
@@ -63,5 +76,6 @@ module.exports = {
   getNotes,
   addNote,
   removeNote,
-  printNotes
+  printNotes,
+  readNote
 };
