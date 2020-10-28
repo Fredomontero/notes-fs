@@ -33,7 +33,15 @@ const removeNote = (title) => {
     console.log(chalk.red.bold("Note not found"));
   }
   
+}
 
+const printNotes = () => {
+  let notes = loadNotes();
+  notes.map(note => {
+    console.log("\n");
+    console.log("Title: ", note.title);
+    console.log("Body: ", note.body);
+  });
 }
 
 const loadNotes = () => {
@@ -54,5 +62,6 @@ const saveNotes = (notes) => {
 module.exports = {
   getNotes,
   addNote,
-  removeNote
+  removeNote,
+  printNotes
 };
