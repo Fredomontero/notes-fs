@@ -24,8 +24,6 @@ const removeNote = (title) => {
   let notes = loadNotes();
   const index = notes.findIndex(note => note.title === title);
   if(index >= 0){
-    console.log("Index: ", index);
-    console.log("notes: ", notes);
     notes.splice(index, 1);
     saveNotes(notes);
     console.log(chalk.red.bold(`Note deleted: ` + title));
